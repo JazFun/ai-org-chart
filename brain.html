@@ -969,6 +969,7 @@ const DEPARTMENTS=[
               {iconKey:'podcast',name:'Keynote Content Developer',triggers:['on-demand','pre-built'],description:"Takes event details, audience info, and Callan's transcripts. Builds the full keynote architecture — the big idea, 3-5 story arcs pulled from real transcripts, slide-by-slide content briefs with speaker notes. The WHAT of the presentation — Design builds the LOOK."},
               {iconKey:'refresh',name:'Content Repurposer',triggers:['on-demand','pre-built'],description:'Takes one high-performing piece of content and transforms it into platform-native versions for every channel — LinkedIn posts, Instagram captions, Threads, email snippets, reel scripts, carousel concepts, newsletter sections. Each feels native, not copy-pasted.'},
               {iconKey:'abtest',name:'Ad Copy Variant Generator',triggers:['on-demand','pre-built'],description:"Generates 5-10 headline and body copy variations for A/B testing from a single approved hook. Outputs TEXT — the words that get tested across ad creatives. Feeds the Design Workspace so we're never running just one version of anything."},
+              {iconKey:'target',name:'GEO SEO Consultant',triggers:['on-demand','pre-built'],description:"Grades any page or topic on how likely it is to show up in ChatGPT, Perplexity, Google AI Overviews, and traditional search. Returns the audit — schema gaps, entity coverage, answer-ability score — plus a ranked list of what to write next and which questions your ICP is actually asking AI. Not a generic checklist. Specific, prioritized, and aware of your brand voice."},
             ],
           },
           {
@@ -1759,6 +1760,13 @@ const EMPLOYEE_ICONS={
       <circle cx="12" cy="12" r="9"/>
       <path d="M14.5 9.2a2.8 2.8 0 0 0-5 2.8 2.8 2.8 0 0 1 5 2.8"/>
       <line x1="12" y1="7" x2="12" y2="17"/>
+    </svg>
+  ),
+  target:(
+    <svg {...SVG_COMMON} className="emp-icon-pulse">
+      <circle cx="12" cy="12" r="9"/>
+      <circle cx="12" cy="12" r="5.5"/>
+      <circle cx="12" cy="12" r="2" fill="currentColor" stroke="none"/>
     </svg>
   ),
 };
