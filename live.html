@@ -3,25 +3,25 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>TUB — A Demo. Across Industries.</title>
+<title>Meridian — A Demo. Across Industries.</title>
 <meta name="description" content="One AI workforce method. Six wildly different brands. Watch them work.">
-<meta property="og:site_name" content="The Uncommon Business">
+<meta property="og:site_name" content="Meridian Advisory Group">
 <meta property="og:type" content="website">
-<meta property="og:title" content="TUB — A Demo. Across Industries.">
+<meta property="og:title" content="Meridian — A Demo. Across Industries.">
 <meta property="og:description" content="One AI workforce method. Six wildly different brands. Watch them work.">
 <meta property="og:url" content="https://carterjensen.github.io/tub-org-chart/live.html">
 <meta property="og:image" content="https://carterjensen.github.io/tub-org-chart/images/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The Uncommon Business — A Demo, Across Industries">
+<meta property="og:image:alt" content="Meridian Advisory Group — A Demo, Across Industries">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="TUB — A Demo. Across Industries.">
+<meta name="twitter:title" content="Meridian — A Demo. Across Industries.">
 <meta name="twitter:description" content="One AI workforce method. Six wildly different brands. Watch them work.">
 <meta name="twitter:image" content="https://carterjensen.github.io/tub-org-chart/images/og-image.png">
 <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<script src="data.js"></script>
+<script src="data-meridian.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,300;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
@@ -425,7 +425,7 @@ img{display:block;max-width:100%;height:auto}
 .image-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);box-shadow:0 0 8px var(--accent)}
 .company-image-caption{position:absolute;bottom:20px;left:20px;right:20px;z-index:3;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:13px;line-height:1.4;color:#EDE8DC;opacity:.88;max-width:320px}
 
-/* ═══ TUB HOST SECTION (distinct feel) ═══ */
+/* ═══ Meridian HOST SECTION (distinct feel) ═══ */
 .company.host{
   background:linear-gradient(180deg,var(--green-subtle) 0%,var(--gold-subtle) 100%);
   border-top:1px solid var(--gold-medium);border-bottom:1px solid var(--gold-soft);
@@ -801,13 +801,13 @@ function ThemeToggle({theme,setTheme}){
 // ═══════════════════════════════════════
 const DEPARTMENTS=['Marketing','Sales','Customer Success','Operations','Finance'];
 
-const TUB={
+const Meridian={
   id:'tub',host:true,
-  name:'The Uncommon Business',
+  name:'Meridian Advisory Group',
   nameNode:<>The Uncommon <em>Business.</em></>,
   shortName:<>The Uncommon <em>Business</em></>,
   category:'Training · Community · AI Architecture',
-  description:<>TUB is where this started. We built the five AI department workspaces inside our own company first — the foundation AI employees live inside of, doing specific jobs across <em>Marketing, Sales, Customer Success, Operations, and Finance</em>. Each one trained on our voice, data, frameworks, and what makes us uncommon. Then we built a curriculum to teach founders how to do the same thing for theirs.</>,
+  description:<>Meridian is where this started. We built the five AI department workspaces inside our own company first — the foundation AI employees live inside of, doing specific jobs across <em>Marketing, Sales, Customer Success, Operations, and Finance</em>. Each one trained on our voice, data, frameworks, and what makes us uncommon. Then we built a curriculum to teach founders how to do the same thing for theirs.</>,
   quote:'Five workspaces. One place where AI employees do real jobs — trained on your voice, your data, your proof. Perfected inside our company first, now taught to yours.',
   founder:'Callan Faulkner',
   founderTitle:'Founder · CEO',
@@ -976,7 +976,7 @@ const FISHWIFE={
   accentSoft:'rgba(224,127,92,.14)',
 };
 
-const ALL_BRANDS=[TUB,...BRANDS,FISHWIFE];
+const ALL_BRANDS=[Meridian,...BRANDS,FISHWIFE];
 
 // ═══════════════════════════════════════
 // HOOKS
@@ -1088,7 +1088,7 @@ function Hero(){
           <span className="hero-peek-arrow">→</span>
         </a>
         <div className="hero-tiles">
-          <Tile brand={TUB} index={0} isHost/>
+          <Tile brand={Meridian} index={0} isHost/>
           {BRANDS.map((c,i)=><Tile key={c.id} brand={c} index={i+1}/>)}
           <Tile brand={FISHWIFE} index={6}/>
         </div>
@@ -1139,7 +1139,7 @@ function TileNav(){
         </div>
       </div>
       <div className="tiles-grid">
-        <Tile brand={TUB} index={0} isHost/>
+        <Tile brand={Meridian} index={0} isHost/>
         {BRANDS.map((c,i)=><Tile key={c.id} brand={c} index={i+1}/>)}
         <Tile brand={FISHWIFE} index={6}/>
       </div>
@@ -1322,7 +1322,7 @@ function Numbers(){
           </div>
           <div className="numbers-closing-meta">
             A demo, across industries<br/>
-            The Uncommon Business · 2026
+            Meridian Advisory Group · 2026
           </div>
         </div>
       </div>
@@ -1350,7 +1350,7 @@ function ReturnSection(){
             <div className="return-card-num">01 / Map</div>
             <div className="return-card-title">The <em>Org Map</em></div>
             <div className="return-card-desc">
-              Every human on the TUB team. Every AI employee they manage. The whole AI Business Brain, drawn as one living structure.
+              Every human on the Meridian team. Every AI employee they manage. The whole AI Business Brain, drawn as one living structure.
             </div>
             <div className="return-card-cta">
               <span>Enter the map</span>
@@ -1370,7 +1370,7 @@ function ReturnSection(){
           </a>
         </div>
         <div className="return-footer">
-          <div>© The Uncommon Business · 2026</div>
+          <div>© Meridian Advisory Group · 2026</div>
           <div>A Demo · Across Industries</div>
         </div>
       </div>
@@ -1433,7 +1433,7 @@ function App(){
       <Keyboard/>
       <TopNav theme={theme} setTheme={setTheme}/>
       <Hero/>
-      <BrandChapter brand={TUB} index={0}/>
+      <BrandChapter brand={Meridian} index={0}/>
       {BRANDS.map((c,i)=><BrandChapter key={c.id} brand={c} index={i+1}/>)}
       <FishwifeIntro/>
       <BrandChapter brand={FISHWIFE} index={6} className="fishwife-section"/>
