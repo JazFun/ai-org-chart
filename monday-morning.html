@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TUB — The Third Shift</title>
 <meta name="description" content="Midnight to 8 AM. While the team sleeps, 24 AI employees run a full shift.">
-<meta property="og:site_name" content="The Uncommon Business">
+<meta property="og:site_name" content="The Meridian Advisory Group">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TUB — The Third Shift">
 <meta property="og:description" content="Midnight to 8 AM. While the team sleeps, 24 AI employees run a full shift.">
@@ -13,7 +13,7 @@
 <meta property="og:image" content="https://carterjensen.github.io/tub-org-chart/images/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="The Uncommon Business — The Third Shift">
+<meta property="og:image:alt" content="Meridian Advisory Group— The Third Shift">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="TUB — The Third Shift">
 <meta name="twitter:description" content="Midnight to 8 AM. While the team sleeps, 24 AI employees run a full shift.">
@@ -21,7 +21,7 @@
 <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-<script src="data.js"></script>
+<script src="data-meridian.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -191,7 +191,7 @@ body{
 .reveal-stat-lbl{font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.3);margin-top:2px}
 .reveal-stat-sub{font-size:10px;color:rgba(209,178,90,.5);margin-top:2px}
 
-/* ═══ SLEEPING CALLAN ═══ */
+/* ═══ SLEEPING Sarah ═══ */
 .sleeping-indicator{
   position:fixed;top:68px;right:24px;z-index:90;
   display:flex;align-items:center;gap:8px;
@@ -385,7 +385,7 @@ function TaskCard({ event, index }) {
   );
 }
 
-function SleepingCallan({ isAwake }) {
+function SleepingSarah({ isAwake }) {
   return (
     <div className={`sleeping-indicator ${isAwake ? 'sleeping-awake' : ''}`}>
       <div className="sleeping-avatar">
@@ -399,7 +399,7 @@ function SleepingCallan({ isAwake }) {
         )}
       </div>
       <div className="sleeping-info">
-        <div className="sleeping-name">{isAwake ? 'Callan is awake' : 'Callan — Sleeping'}</div>
+        <div className="sleeping-name">{isAwake ? 'Sarah is awake' : 'Sarah — Sleeping'}</div>
         <div className="sleeping-status">{isAwake ? 'Reviewing overnight work' : 'AI employees are handling it'}</div>
       </div>
     </div>
@@ -411,7 +411,7 @@ function RevealCard({ tasks }) {
   const totalDollar = Math.round(totalHours * 125);
   return (
     <div className="reveal-card">
-      <h2>The third shift is over. Callan opens her laptop.</h2>
+      <h2>The third shift is over. Sarah opens her laptop.</h2>
       <p>It's 8:00 AM. While the entire team slept, {tasks.length} AI employees ran autonomously through the night — completing {totalHours.toFixed(1)} hours of work worth ${totalDollar.toLocaleString()}. Large tasks, done perfectly, waiting for review.</p>
       <div className="reveal-stats">
         <div style={{textAlign:'center'}}><div className="reveal-stat-num">{tasks.length}</div><div className="reveal-stat-lbl">Tasks Done</div></div>
@@ -492,7 +492,7 @@ function App() {
 
       <div className="nav-bar">
         <div className="nav-left">
-          <div className="nav-logo">The Uncommon <em>Business</em></div>
+          <div className="nav-logo">The Meridian Advisory <em>Group</em></div>
           <div className="nav-divider" />
           <div className="nav-tabs">
             <a className="nav-tab" href="index.html">Org Map</a>
@@ -571,7 +571,7 @@ function App() {
         </div>
       </div>
 
-      <SleepingCallan isAwake={isAwake} />
+      <SleepingSarah isAwake={isAwake} />
     </>
   );
 }
