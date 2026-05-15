@@ -348,3 +348,343 @@ const FLOW_STORIES = [
     ]
   },
 ];
+
+// ═══════════════════════════════════════
+// ECOSYSTEM DATA — Meridian AI Employees
+// Full detail: skills, data sources, tools, cadence
+// ═══════════════════════════════════════
+
+const LAYER_DEFS_ECO = [
+  { id: 'executive',  name: 'Executive Layer',         color: '#D1B25A', bg: 'rgba(209,178,90,.08)',  border: 'rgba(209,178,90,.2)',  desc: 'Firm strategy, KPIs, partner oversight, and business development', count: 2 },
+  { id: 'advisory',   name: 'CFO Advisory Layer',      color: '#2A8F82', bg: 'rgba(42,143,130,.08)',  border: 'rgba(42,143,130,.2)',  desc: 'Financial reporting, cash flow, budgets, and strategic client advisory', count: 3 },
+  { id: 'tax',        name: 'Tax Layer',               color: '#C26688', bg: 'rgba(194,102,136,.08)', border: 'rgba(194,102,136,.2)', desc: 'Return preparation, document collection, review, and tax planning', count: 4 },
+  { id: 'cas',        name: 'Bookkeeping / CAS Layer',  color: '#4A8C5C', bg: 'rgba(74,140,92,.08)',   border: 'rgba(74,140,92,.2)',   desc: 'Transaction processing, reconciliations, month-end close, and client coordination', count: 4 },
+  { id: 'operations', name: 'Operations Layer',        color: '#3A7CA5', bg: 'rgba(58,124,165,.08)',  border: 'rgba(58,124,165,.2)',  desc: 'Billing, client onboarding, offboarding, tech stack, and firm administration', count: 3 },
+  { id: 'hr',         name: 'HR & People Layer',       color: '#7B5EA7', bg: 'rgba(123,94,167,.08)',  border: 'rgba(123,94,167,.2)',  desc: 'Employee onboarding, offboarding, payroll, benefits, and compliance', count: 2 },
+];
+
+const ECOSYSTEM_EMPLOYEES = [
+
+  // ═══ EXECUTIVE LAYER ═══
+  {
+    id: 'firm-strategist', name: 'Firm Strategist', layer: 'executive',
+    icon: '🧠', role: 'Pressure-tests firm decisions — pricing changes, new service lines, staffing, and market positioning. Thinks like a $10M+ managing partner.',
+    managedBy: 'Sarah Mitchell', managedByTitle: 'Managing Partner',
+    skills: [
+      { name: 'Capacity Planning Model', status: 'built' },
+      { name: 'Client Profitability Analyzer', status: 'built' },
+      { name: 'Service Line ROI Calculator', status: 'built' },
+      { name: 'Pricing Strategy Advisor', status: 'built' },
+      { name: 'Competitive Positioning Brief', status: 'needs-build' },
+    ],
+    dataSets: ['Firm P&L', 'Client roster and billing data', 'Team capacity and utilization', 'Industry benchmarks'],
+    tools: ['QuickBooks Online', 'Canopy', 'Google Sheets', 'Slack'],
+    cadence: ['Monthly: Firm KPI review', 'Quarterly: Strategic planning session', 'On demand: Pricing and hiring decisions'],
+  },
+  {
+    id: 'kpi-reporter', name: 'KPI & Performance Reporter', layer: 'executive',
+    icon: '📊', role: 'Compiles and delivers firm-wide performance metrics to the managing partner. Monitors revenue, realization, capacity, and AR aging — weekly without being asked.',
+    managedBy: 'Sarah Mitchell', managedByTitle: 'Managing Partner',
+    skills: [
+      { name: 'Weekly KPI Dashboard', status: 'built' },
+      { name: 'AR Aging Report', status: 'built' },
+      { name: 'Realization Rate Tracker', status: 'built' },
+      { name: 'Capacity Utilization Monitor', status: 'built' },
+      { name: 'Goal Progress Tracker', status: 'needs-build' },
+    ],
+    dataSets: ['Canopy time and billing data', 'QBO financial data', 'Team capacity data', 'Annual firm goals'],
+    tools: ['Canopy', 'QuickBooks Online', 'Google Sheets', 'Slack'],
+    cadence: ['Weekly: KPI digest to Sarah', 'Monthly: Full performance report', 'Triggered: Alert when metric drifts off target'],
+  },
+
+  // ═══ CFO ADVISORY LAYER ═══
+  {
+    id: 'advisory-report-builder', name: 'Advisory Report Builder', layer: 'advisory',
+    icon: '📊', role: 'Pulls QBO data, populates monthly report templates, and drafts narrative commentary for every advisory client. Turns 3 hours of formatting into 30 minutes of review.',
+    managedBy: 'Marcus Webb', managedByTitle: 'CFO Advisory Partner',
+    skills: [
+      { name: 'QBO Monthly Report Extractor', status: 'built' },
+      { name: 'Variance Commentary Writer', status: 'built' },
+      { name: 'Cash Flow Forecast Builder', status: 'built' },
+      { name: 'Budget vs. Actual Analyzer', status: 'built' },
+      { name: 'KPI Dashboard Designer', status: 'built' },
+      { name: 'Board Meeting Prep Builder', status: 'needs-build' },
+    ],
+    dataSets: ['QuickBooks Online (all advisory clients)', 'Prior period reports', 'Client budgets', 'Industry benchmarks'],
+    tools: ['QuickBooks Online', 'Google Slides', 'Google Sheets', 'Canopy'],
+    cadence: ['Monthly: Full report package per client', 'Weekly: Cash flow update', 'Pre-meeting: Board prep 48 hours out'],
+  },
+  {
+    id: 'financial-narrator', name: 'Financial Narrator', layer: 'advisory',
+    icon: '✍️', role: 'Translates complex financial data into plain-English stories business owners actually understand and act on. No jargon. No confusion. Just clarity.',
+    managedBy: 'Rachel Park', managedByTitle: 'CFO Advisory Associate',
+    skills: [
+      { name: 'Variance Explanation Writer', status: 'built' },
+      { name: 'Executive Summary Builder', status: 'built' },
+      { name: 'Client-Facing Narrative Draft', status: 'built' },
+      { name: 'Action Item Extractor', status: 'needs-build' },
+    ],
+    dataSets: ['Monthly financial reports', 'Prior period comparisons', 'Client industry context', 'Advisory meeting notes'],
+    tools: ['Google Docs', 'QuickBooks Online', 'Notion'],
+    cadence: ['Monthly: Narrative draft with every report', 'Post-meeting: Recap with action items', 'On demand: Ad hoc explanations'],
+  },
+  {
+    id: 'scenario-modeler', name: 'Scenario & Forecast Modeler', layer: 'advisory',
+    icon: '🔢', role: 'Builds what-if models for hiring, pricing, and capital decisions. Three scenarios in 10 minutes. Gives clients the confidence to make big moves with real numbers behind them.',
+    managedBy: 'Marcus Webb', managedByTitle: 'CFO Advisory Partner',
+    skills: [
+      { name: 'Hiring Impact Model', status: 'built' },
+      { name: 'Pricing Change Scenario', status: 'built' },
+      { name: 'Cash Flow Stress Test', status: 'built' },
+      { name: 'M&A Target Analyzer', status: 'needs-build' },
+      { name: 'Break-Even Calculator', status: 'built' },
+    ],
+    dataSets: ['Client P&L history', 'QBO financial data', 'Industry salary benchmarks', 'Market comparables'],
+    tools: ['Google Sheets', 'QuickBooks Online', 'Notion'],
+    cadence: ['On demand: Decision-point modeling', 'Quarterly: Strategic scenario review', 'Pre-meeting: Scenarios ready 24 hours out'],
+  },
+
+  // ═══ TAX LAYER ═══
+  {
+    id: 'tax-production-manager', name: 'Tax Production Manager', layer: 'tax',
+    icon: '📋', role: 'Manages the entire tax production pipeline — status tracking, deadline alerts, review queues, and bottleneck identification. Diana always knows exactly where every return stands.',
+    managedBy: 'Diana Reyes', managedByTitle: 'Senior Tax Manager',
+    skills: [
+      { name: 'Return Status Dashboard', status: 'built' },
+      { name: 'Deadline Alert System', status: 'built' },
+      { name: 'Review Queue Manager', status: 'built' },
+      { name: 'Extension Filing Tracker', status: 'built' },
+      { name: 'Bottleneck Identifier', status: 'needs-build' },
+    ],
+    dataSets: ['Canopy project data', 'Client engagement list', 'Filing calendar', 'Prior year return dates'],
+    tools: ['Canopy', 'Slack', 'Google Sheets', 'UltraTax CS'],
+    cadence: ['Daily: Status dashboard update', 'Weekly: Production health report', 'Triggered: Deadline alerts at 30/14/3 days'],
+  },
+  {
+    id: 'tax-researcher', name: 'Tax Research Agent', layer: 'tax',
+    icon: '🔍', role: 'Answers technical tax questions by searching current IRS guidance, code sections, and recent rulings — with citations. Turns a 2-hour research project into a 5-minute answer.',
+    managedBy: 'Diana Reyes', managedByTitle: 'Senior Tax Manager',
+    skills: [
+      { name: 'IRS Guidance Search', status: 'built' },
+      { name: 'Code Section Lookup', status: 'built' },
+      { name: 'Tax Planning Memo Writer', status: 'built' },
+      { name: 'IRS Notice Response Drafter', status: 'built' },
+      { name: 'Prior Year Comparison Analyst', status: 'built' },
+      { name: 'State Tax Guidance Search', status: 'needs-build' },
+    ],
+    dataSets: ['IRS publications', 'Tax code sections', 'Recent rulings and guidance', 'Client tax history'],
+    tools: ['Web search', 'UltraTax CS', 'Notion', 'Google Drive'],
+    cadence: ['On demand: Technical questions', 'Pre-filing: Strategy memo for complex clients', 'Triggered: IRS notice response'],
+  },
+  {
+    id: 'document-collector', name: 'Document Collection Agent', layer: 'tax',
+    icon: '📁', role: 'Runs the entire client document collection process — intake checklists, automated follow-ups, receipt confirmation, and packet organization. Nobody chases paper manually anymore.',
+    managedBy: 'Emma Castillo', managedByTitle: 'Tax Associate — Data Collection',
+    skills: [
+      { name: 'Intake Checklist Generator', status: 'built' },
+      { name: 'Automated Reminder Sequence', status: 'built' },
+      { name: 'Receipt Confirmation Sender', status: 'built' },
+      { name: 'Packet Organizer', status: 'built' },
+      { name: '1099 and K-1 Tracker', status: 'built' },
+      { name: 'PDF Data Extractor', status: 'needs-build' },
+    ],
+    dataSets: ['Client engagement list', 'Document requirement templates by return type', 'Canopy portal data', 'Prior year document logs'],
+    tools: ['Canopy', 'Gmail', 'Google Drive', 'DocuSign'],
+    cadence: ['Per engagement: Checklist sent at signing', 'Weekly: Follow-up sequence for outstanding items', 'Triggered: Confirmation when packet is complete'],
+  },
+  {
+    id: 'return-reviewer', name: 'Return Quality Reviewer', layer: 'tax',
+    icon: '✅', role: 'Reviews completed returns against standardized checklists before they reach the Senior Manager. Catches errors at the production level so Diana reviews clean work — not sloppy first drafts.',
+    managedBy: 'Tom Nguyen', managedByTitle: 'Tax Associate — Review & Production',
+    skills: [
+      { name: 'Return Checklist Review', status: 'built' },
+      { name: 'Prior Year Cross-Reference', status: 'built' },
+      { name: 'Schedule Completeness Check', status: 'built' },
+      { name: 'E-File Status Monitor', status: 'built' },
+      { name: 'Client Delivery Email Drafter', status: 'needs-build' },
+    ],
+    dataSets: ['Completed return files', 'Prior year returns', 'UltraTax CS data', 'Review checklist standards'],
+    tools: ['UltraTax CS', 'Canopy', 'Google Drive', 'Gmail'],
+    cadence: ['Per return: Quality check before advancing to review', 'Weekly: Production quality report', 'Triggered: E-file acknowledgment monitoring'],
+  },
+
+  // ═══ CAS / BOOKKEEPING LAYER ═══
+  {
+    id: 'transaction-processor', name: 'Transaction Processing Agent', layer: 'cas',
+    icon: '🏷️', role: 'Categorizes transactions, suggests QBO codes, builds payroll entries, and flags ambiguous items for human review. Processes hundreds of transactions before the bookkeeper opens their laptop.',
+    managedBy: 'Lauren Chen', managedByTitle: 'CAS Manager / Senior Bookkeeper',
+    skills: [
+      { name: 'Transaction Categorizer', status: 'built' },
+      { name: 'Payroll Entry Builder', status: 'built' },
+      { name: 'Vendor Memory Engine', status: 'built' },
+      { name: 'Ambiguous Transaction Flagger', status: 'built' },
+      { name: 'New Client COA Builder', status: 'built' },
+    ],
+    dataSets: ['QBO transaction feeds', 'Chart of accounts standards', 'Vendor history by client', 'Payroll reports'],
+    tools: ['QuickBooks Online', 'Google Sheets', 'Notion'],
+    cadence: ['Daily: Overnight transaction processing', 'Monthly: New client COA setup', 'Triggered: Ambiguous item flagged for review'],
+  },
+  {
+    id: 'reconciliation-agent', name: 'Reconciliation Agent', layer: 'cas',
+    icon: '🔢', role: 'Pre-stages bank reconciliation workpapers, matches transactions to ledger entries, and highlights exceptions. Bookkeepers walk in to organized reconciliation files — not blank spreadsheets.',
+    managedBy: 'Carlos Rivera', managedByTitle: 'Bookkeeper',
+    skills: [
+      { name: 'Reconciliation Workpaper Builder', status: 'built' },
+      { name: 'Transaction Matcher', status: 'built' },
+      { name: 'Exception Highlighter', status: 'built' },
+      { name: 'AR/AP Aging Tracker', status: 'built' },
+      { name: 'Undeposited Funds Monitor', status: 'needs-build' },
+    ],
+    dataSets: ['Bank statements', 'QBO ledger data', 'Prior reconciliations', 'Outstanding check lists'],
+    tools: ['QuickBooks Online', 'Google Sheets', 'Canopy'],
+    cadence: ['Monthly: Workpapers staged when statements arrive', 'Weekly: AR/AP aging update', 'Triggered: Exception flagged immediately'],
+  },
+  {
+    id: 'books-quality-reviewer', name: 'Books Quality Reviewer', layer: 'cas',
+    icon: '🔍', role: 'Reviews completed bookkeeper work against Meridian quality standards before delivery. Flags miscategorizations, reconciliation gaps, and missing entries so Lauren reviews clean books — not messy ones.',
+    managedBy: 'Lauren Chen', managedByTitle: 'CAS Manager / Senior Bookkeeper',
+    skills: [
+      { name: 'Categorization Accuracy Check', status: 'built' },
+      { name: 'Reconciliation Gap Detector', status: 'built' },
+      { name: 'Month-End Completeness Check', status: 'built' },
+      { name: 'Client-Ready Books Verifier', status: 'built' },
+      { name: 'Catch-Up Project Scoper', status: 'built' },
+    ],
+    dataSets: ['Completed client QBO files', 'Meridian quality standards', 'Prior period books', 'Month-end checklist templates'],
+    tools: ['QuickBooks Online', 'Notion', 'Canopy'],
+    cadence: ['Monthly: Pre-delivery quality review per client', 'Weekly: Books health portfolio report', 'On demand: Catch-up project scoping'],
+  },
+  {
+    id: 'client-document-coordinator', name: 'Client Document Coordinator', layer: 'cas',
+    icon: '🏦', role: 'Manages all client document collection for bookkeeping — bank statements, credit card feeds, receipts. Sends automated requests, tracks receipts, and logs everything so bookkeepers always know what is ready.',
+    managedBy: 'Mia Kaufman', managedByTitle: 'Client Services Coordinator',
+    skills: [
+      { name: 'Monthly Statement Request Sender', status: 'built' },
+      { name: 'Document Receipt Logger', status: 'built' },
+      { name: 'Overdue Document Chaser', status: 'built' },
+      { name: 'Portal Access Manager', status: 'built' },
+      { name: 'Client Communication Drafter', status: 'built' },
+    ],
+    dataSets: ['Client contact list', 'Monthly document requirements', 'Canopy portal data', 'Statement receipt history'],
+    tools: ['Canopy', 'Gmail', 'Google Drive', 'Slack'],
+    cadence: ['Monthly: Statement requests sent on the 1st', 'Weekly: Outstanding document follow-up', 'Triggered: Receipt confirmation when documents arrive'],
+  },
+
+  // ═══ OPERATIONS LAYER ═══
+  {
+    id: 'client-onboarding-agent', name: 'Client Onboarding Agent', layer: 'operations',
+    icon: '👋', role: 'Runs the complete new client onboarding pipeline — engagement letters, portal setup, document collection, credential management, and kickoff scheduling. Onboarding that used to take 3 weeks now takes 3 days.',
+    managedBy: 'Megan Torres', managedByTitle: 'Client Onboarding & Offboarding Coordinator',
+    skills: [
+      { name: 'Engagement Letter Generator', status: 'built' },
+      { name: 'Welcome Sequence Sender', status: 'built' },
+      { name: 'Portal Setup Guide', status: 'built' },
+      { name: 'Onboarding Status Tracker', status: 'built' },
+      { name: 'Credential Manager', status: 'built' },
+      { name: 'Offboarding Checklist Runner', status: 'needs-build' },
+    ],
+    dataSets: ['New client engagement data', 'Service line templates', 'DocuSign templates', 'Portal access logs'],
+    tools: ['DocuSign', 'Canopy', 'Gmail', 'Google Drive', 'Slack'],
+    cadence: ['Triggered: Full pipeline starts at engagement signing', 'Weekly: Onboarding status report', 'Triggered: Offboarding at engagement end'],
+  },
+  {
+    id: 'billing-manager', name: 'Billing & Collections Manager', layer: 'operations',
+    icon: '🧾', role: 'Generates invoices, monitors payment status, and runs the collections sequence for overdue accounts. AR is always current. Nobody manually chases invoices.',
+    managedBy: 'James Thornton', managedByTitle: 'COO / Firm Administrator',
+    skills: [
+      { name: 'Invoice Generator', status: 'built' },
+      { name: 'Payment Status Monitor', status: 'built' },
+      { name: 'Collections Reminder Sequence', status: 'built' },
+      { name: 'Overdue Account Escalator', status: 'built' },
+      { name: 'Time Entry Reconciler', status: 'built' },
+    ],
+    dataSets: ['Canopy time entries', 'Client billing rates', 'Invoice history', 'Payment records'],
+    tools: ['Canopy', 'QuickBooks Online', 'Gmail', 'Slack'],
+    cadence: ['Monthly: Invoice generation after close', 'Weekly: AR aging review', 'Triggered: Collections at 15/30/60 days'],
+  },
+  {
+    id: 'operations-monitor', name: 'Operations Monitor', layer: 'operations',
+    icon: '📈', role: 'Tracks the operational health of the entire firm — tech stack, vendor contracts, software renewals, and open administrative items. James always knows what needs attention before it becomes a problem.',
+    managedBy: 'Priya Okafor', managedByTitle: 'Operations & Admin Coordinator',
+    skills: [
+      { name: 'Tech Stack Auditor', status: 'built' },
+      { name: 'Vendor Renewal Tracker', status: 'built' },
+      { name: 'Operations Health Reporter', status: 'built' },
+      { name: 'Expense Report Processor', status: 'built' },
+      { name: 'Firm SOP Architect', status: 'needs-build' },
+    ],
+    dataSets: ['Software subscription list', 'Vendor contracts', 'Firm expense data', 'Operations task logs'],
+    tools: ['Google Sheets', 'Slack', 'Gmail', 'Notion'],
+    cadence: ['Weekly: Operations digest to James', 'Monthly: Tech stack and vendor audit', 'Triggered: Renewal alert 60 days out'],
+  },
+
+  // ═══ HR & PEOPLE LAYER ═══
+  {
+    id: 'people-ops-agent', name: 'People Operations Agent', layer: 'hr',
+    icon: '👥', role: 'Manages the full employee lifecycle — onboarding, offboarding, payroll prep, benefits tracking, and compliance monitoring. Derek handles people. The AI handles the paperwork.',
+    managedBy: 'Derek Shaw', managedByTitle: 'HR & People Operations',
+    skills: [
+      { name: 'Employee Onboarding Builder', status: 'built' },
+      { name: 'Offboarding Checklist Runner', status: 'built' },
+      { name: 'Payroll Data Compiler', status: 'built' },
+      { name: 'Benefits Enrollment Tracker', status: 'built' },
+      { name: 'HR Compliance Monitor', status: 'built' },
+      { name: 'Team Pulse Analyzer', status: 'needs-build' },
+    ],
+    dataSets: ['Employee records', 'Payroll data', 'Benefits enrollment information', 'Compliance calendar', 'I-9 and certification records'],
+    tools: ['Gusto', 'Gmail', 'Google Drive', 'Slack', 'Notion'],
+    cadence: ['Per hire: Onboarding plan generated', 'Per departure: Offboarding checklist triggered', 'Weekly: Payroll prep', 'Monthly: Compliance check'],
+  },
+  {
+    id: 'talent-recruiter', name: 'Talent & Recruiting Agent', layer: 'hr',
+    icon: '📝', role: 'Writes job descriptions, builds interview guides, and manages the recruiting pipeline. When Meridian needs to hire, the process is ready — not built from scratch every time.',
+    managedBy: 'Derek Shaw', managedByTitle: 'HR & People Operations',
+    skills: [
+      { name: 'Job Description Writer', status: 'built' },
+      { name: 'Interview Guide Builder', status: 'built' },
+      { name: 'Candidate Evaluation Scorer', status: 'needs-build' },
+      { name: 'Offer Letter Generator', status: 'needs-build' },
+      { name: 'Compensation Benchmarker', status: 'needs-build' },
+    ],
+    dataSets: ['Role requirements', 'Compensation benchmarks', 'Firm culture standards', 'Past job descriptions'],
+    tools: ['Gmail', 'Google Docs', 'Notion', 'Slack'],
+    cadence: ['On demand: Job posting when role opens', 'Per candidate: Interview guide before interview', 'Post-hire: Onboarding handoff to People Ops Agent'],
+  },
+];
+
+// ═══ SHARED SKILLS (used by 2+ employees) ═══
+const SHARED_SKILLS = [
+  { name: 'QBO Report Extractor', employees: ['advisory-report-builder', 'scenario-modeler', 'reconciliation-agent'] },
+  { name: 'Variance Commentary Writer', employees: ['advisory-report-builder', 'financial-narrator'] },
+  { name: 'Client Communication Drafter', employees: ['client-document-coordinator', 'document-collector'] },
+  { name: 'Month-End Completeness Check', employees: ['books-quality-reviewer', 'transaction-processor'] },
+  { name: 'Onboarding Checklist Runner', employees: ['client-onboarding-agent', 'people-ops-agent'] },
+  { name: 'Compliance Monitor', employees: ['people-ops-agent', 'operations-monitor'] },
+  { name: 'Status Dashboard Builder', employees: ['tax-production-manager', 'kpi-reporter'] },
+];
+
+// ═══ FLOW STORIES (reused from main data) ═══
+const ECO_FLOW_STORIES = [
+  {
+    title: 'A Tax Season Document Lands',
+    desc: 'Watch a single client document upload trigger a chain of AI actions across the tax department.',
+    steps: [
+      { employeeId: 'document-collector', action: 'Document receipt logged and packet completeness checked', output: 'Packet status updated — 2 items still outstanding' },
+      { employeeId: 'document-collector', action: 'Automated follow-up sent for remaining missing items', output: 'Client responds — final documents uploaded' },
+      { employeeId: 'document-collector', action: 'Complete packet organized into standardized folder structure', output: 'Clean packet ready — preparer assigned and notified' },
+      { employeeId: 'return-reviewer', action: 'Prior year comparison run before preparer opens the file', output: 'Comparison report attached — 3 variances flagged for attention' },
+      { employeeId: 'tax-production-manager', action: 'Return status updated in production dashboard', output: 'Diana sees the return enter the queue — no status meeting needed' },
+    ]
+  },
+  {
+    title: 'Month-End Close at Meridian',
+    desc: 'How AI employees run the bookkeeping production line from statement collection to client-ready books.',
+    steps: [
+      { employeeId: 'client-document-coordinator', action: 'Monthly bank statement requests sent to all CAS clients', output: '42 requests delivered — tracking begins immediately' },
+      { employeeId: 'transaction-processor', action: 'Transactions processed overnight as statements arrive', output: '93% categorized — exceptions flagged for bookkeeper review' },
+      { employeeId: 'reconciliation-agent', action: 'Reconciliation workpapers staged for each client', output: 'Bookkeepers open organized files — not blank spreadsheets' },
+      { employeeId: 'books-quality-reviewer', action: 'Completed books reviewed against quality standards', output: '2 files flagged — Lauren reviews exceptions, not every line' },
+      { employeeId: 'advisory-report-builder', action: 'QBO data pulled and advisory reports drafted for advisory clients', output: '6 client reports with commentary — Marcus reviews, not builds' },
+    ]
+  },
+];
