@@ -688,3 +688,25 @@ const ECO_FLOW_STORIES = [
     ]
   },
 ];
+
+// ═══════════════════════════════════════
+// REQUIRED VARIABLES FOR ECOSYSTEM PAGE
+// ═══════════════════════════════════════
+
+const SHARED_CAPABILITIES = [
+  { name: 'QBO Report Extractor', icon: '📒', desc: 'Pulls financial data from QuickBooks Online for any client', usedBy: ['advisory-report-builder', 'scenario-modeler', 'reconciliation-agent'] },
+  { name: 'Client Communication Drafter', icon: '✉️', desc: 'Writes professional client-facing emails in Meridian\'s voice', usedBy: ['client-document-coordinator', 'document-collector', 'return-reviewer'] },
+  { name: 'Compliance Checklist Runner', icon: '✅', desc: 'Generates and tracks compliance checklists for tax and HR', usedBy: ['people-ops-agent', 'tax-production-manager'] },
+  { name: 'Status Dashboard Builder', icon: '📊', desc: 'Builds real-time status views for production pipelines', usedBy: ['tax-production-manager', 'kpi-reporter', 'books-quality-reviewer'] },
+];
+
+// Note: original code uses INFASTRUCTURE (typo preserved for compatibility)
+const INFASTRUCTURE = [
+  { name: 'QuickBooks Online', icon: '📒', desc: 'Accounting platform — all client books, reports, and financial data' },
+  { name: 'Canopy', icon: '📋', desc: 'Practice management — project tracking, document requests, billing' },
+  { name: 'Google Drive', icon: '📁', desc: 'Document storage — client files, workpapers, deliverables' },
+  { name: 'DocuSign', icon: '✍️', desc: 'E-signature — engagement letters, authorizations, agreements' },
+  { name: 'Gmail + Workspace', icon: '✉️', desc: 'Communication — client emails, internal team coordination' },
+  { name: 'Slack', icon: '💬', desc: 'Internal team — AI alerts, briefings, and department channels' },
+  { name: 'UltraTax CS', icon: '🧾', desc: 'Tax software — return preparation and filing for all entity types' },
+];
