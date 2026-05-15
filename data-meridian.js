@@ -318,33 +318,33 @@ const FLOW_STORIES = [
     title: 'Tax Season Kicks Off',
     desc: 'A new tax engagement triggers a fully automated document collection and preparation pipeline — no manual steps.',
     steps: [
-      { employeeId: 'megan',  action: 'Engagement letter generated and sent via DocuSign automatically at signing', output: 'Signed engagement letter received — onboarding pipeline triggered' },
-      { employeeId: 'emma',   action: 'Personalized document checklist sent to client with portal access instructions', output: 'Client portal active — every required document tracked in real time' },
-      { employeeId: 'emma',   action: 'Automated reminders sent at day 7 and day 14 for every outstanding item', output: 'Client responds — complete document packet uploaded and organized' },
-      { employeeId: 'emma',   action: 'Incoming documents sorted, labeled, and filed into standardized folder structure', output: 'Clean packet ready — preparer assigned and notified immediately' },
-      { employeeId: 'diana',  action: 'Year-over-year comparison run against prior return before preparer opens the file', output: 'Comparison report attached — Diana reviews flagged variances before the return is touched' },
+      { employeeId: 'client-onboarding-agent', action: 'Engagement letter generated and sent via DocuSign automatically at signing', output: 'Signed engagement letter received — onboarding pipeline triggered' },
+      { employeeId: 'document-collector', action: 'Personalized document checklist sent to client with portal access instructions', output: 'Client portal active — every required document tracked in real time' },
+      { employeeId: 'document-collector', action: 'Automated reminders sent at day 7 and day 14 for every outstanding item', output: 'Client responds — complete document packet uploaded and organized' },
+      { employeeId: 'document-collector', action: 'Incoming documents sorted, labeled, and filed into standardized folder structure', output: 'Clean packet ready — preparer assigned and notified immediately' },
+      { employeeId: 'return-reviewer', action: 'Year-over-year comparison run against prior return before preparer opens the file', output: 'Comparison report attached — Diana reviews flagged variances before the return is touched' },
     ]
   },
   {
     title: 'Monday Morning at Meridian',
     desc: 'Before the first person walks in, 14 AI employees have already completed hours of work across every department.',
     steps: [
-      { employeeId: 'mia',     action: 'Sent document requests to all 85 clients overnight while the team slept', output: '85 personalized requests delivered — 12 client responses already received' },
-      { employeeId: 'carlos',  action: 'Processed 590 transactions across 25 client files automatically', output: '93% categorized — 41 flagged items ready for bookkeeper review at login' },
-      { employeeId: 'marcus',  action: 'Pulled QBO data and built draft advisory reports for 6 clients', output: '6 reports with narrative commentary — Marcus reviews instead of builds from scratch' },
-      { employeeId: 'diana',   action: 'Updated all 47 active tax returns with current production status', output: 'Diana walks in knowing exactly where every return stands — no status meeting needed' },
-      { employeeId: 'sarah',   action: 'Compiled firm KPIs, financial health snapshot, and capacity report', output: 'Sarah\'s morning brief is waiting at login — no meetings needed to get the update' },
+      { employeeId: 'client-document-coordinator', action: 'Sent document requests to all 85 clients overnight while the team slept', output: '85 personalized requests delivered — 12 client responses already received' },
+      { employeeId: 'transaction-processor', action: 'Processed 590 transactions across 25 client files automatically', output: '93% categorized — 41 flagged items ready for bookkeeper review at login' },
+      { employeeId: 'advisory-report-builder', action: 'Pulled QBO data and built draft advisory reports for 6 clients', output: '6 reports with narrative commentary — Marcus reviews instead of builds from scratch' },
+      { employeeId: 'tax-production-manager', action: 'Updated all 47 active tax returns with current production status', output: 'Diana walks in knowing exactly where every return stands — no status meeting needed' },
+      { employeeId: 'kpi-reporter', action: 'Compiled firm KPIs, financial health snapshot, and capacity report', output: 'Sarah\'s morning brief is waiting at login — no meetings needed to get the update' },
     ]
   },
   {
     title: 'New Client Onboarded in 3 Days',
     desc: 'From signed engagement to first deliverable — a process that used to take 3 weeks now runs in 3 days.',
     steps: [
-      { employeeId: 'megan',   action: 'Welcome sequence triggered the moment the engagement letter is countersigned', output: 'Welcome email sent, portal access created, kickoff call scheduled automatically' },
-      { employeeId: 'megan',   action: 'Client guided through portal access, document upload, and bank connection setup', output: 'Client fully set up — first document submission received within 48 hours' },
-      { employeeId: 'lauren',  action: 'Standard chart of accounts applied to new QBO environment on day one', output: 'Books set up correctly from the start — no cleanup needed six months later' },
-      { employeeId: 'mia',     action: 'Client credentials logged and all team members given correct access permissions', output: 'Entire team has access — no password hunting, no access request delays' },
-      { employeeId: 'megan',   action: 'Onboarding status added to weekly tracking dashboard automatically', output: 'James and Megan see exactly where every new client stands — nothing falls through' },
+      { employeeId: 'client-onboarding-agent', action: 'Welcome sequence triggered the moment the engagement letter is countersigned', output: 'Welcome email sent, portal access created, kickoff call scheduled automatically' },
+      { employeeId: 'client-onboarding-agent', action: 'Client guided through portal access, document upload, and bank connection setup', output: 'Client fully set up — first document submission received within 48 hours' },
+      { employeeId: 'books-quality-reviewer', action: 'Standard chart of accounts applied to new QBO environment on day one', output: 'Books set up correctly from the start — no cleanup needed six months later' },
+      { employeeId: 'client-document-coordinator', action: 'Client credentials logged and all team members given correct access permissions', output: 'Entire team has access — no password hunting, no access request delays' },
+      { employeeId: 'operations-monitor', action: 'Onboarding status added to weekly tracking dashboard automatically', output: 'James and Megan see exactly where every new client stands — nothing falls through' },
     ]
   },
 ];
