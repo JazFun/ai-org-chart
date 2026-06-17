@@ -20,7 +20,7 @@
 <meta name="twitter:image" content="https://carterjensen.github.io/tub-org-chart/images/og-image.png">
 <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.21.5/babel.min.js"></script>
 <script src="data-meridian.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;1,14..32,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <style>
@@ -264,8 +264,7 @@ body{font-family:'Inter',-apple-system,sans-serif;background:#F7F7F5;color:#1a1a
 </head>
 <body>
 <div id="root"></div>
-<script>Babel.registerPreset('react-classic',{presets:[['react',{runtime:'classic'}]]});</script>
-<script type="text/babel" data-presets="react-classic">
+<script type="text/babel">
 const{useState,useCallback,useRef,useEffect}=React;
 
 // Uses SHARED_ORG and TOTAL_HUMANS from data.js
